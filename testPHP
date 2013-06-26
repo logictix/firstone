@@ -1,0 +1,85 @@
+<?php session_start();
+if (isset($_POST['fr'])) {
+$_SESSION['lang']="fr";
+header('Location:accueil.php');
+}
+if (isset($_POST['an'])) {
+$_SESSION['lang']="an";
+header('Location:home.php');
+}
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="il.css" media="screen" >
+        <title>Informatique Logictix</title>
+    </head>
+
+    <body>
+    <form  id="frmlangue" name="frmlangue" method="post" action="index.php" class="formx">
+    <div id="container" >
+            <script src="ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+            <img  id="ImgLogo" alt="Informatique Logictix" src="IMG/logo.jpg" class="logo"/>                  
+   
+    <input class="butMenuPage" id="fr" name="fr" type="submit" value="Fran&ccedil;ais" class="inpFr" />
+ 
+    <input class="butMenuPage" id="an" name="an" type="submit" value="Anglais" class="inpAn" />
+
+  
+        <div id="experiment">
+	<div class="cube">
+		<div class="topFace"><div>
+			<img  id="Img1" alt="php" src="IMG/php.jpg" style="width: 190px; height:190px;"/>
+		</div></div>
+		<div class="leftFace">
+			<img  id="Img1" alt="ajax" src="IMG/ajax.jpg" style="width: 190px; height:190px;"/>
+		</div>
+		<div class="rightFace">
+                        <img  id="Img1" alt="cms" src="IMG/cms.jpg" style="width: 190px; height:190px;"/>
+		</div>
+	</div>
+	<div class="cube two">
+		<div class="topFace"><div>
+                        <img  id="Img1" alt="CSS3" src="IMG/css3.jpg" style="width: 190px; height:190px;"/>
+		</div></div>
+		<div class="leftFace">
+                        <img  id="Img1" alt="firefox" src="IMG/firefox.jpg" style="width: 190px; height:190px;"/>
+		</div>
+		<div class="rightFace">
+                        <img  id="Img1" alt="html5" src="IMG/html5.jpg" style="width: 190px; height:190px;"/>
+		</div>
+	</div>
+	<div class="cube three">
+		<div class="topFace"><div>
+                    <img  id="Img1" alt="sqlserver" src="IMG/sqlserver.jpg" style="width: 190px; height:190px;"/>
+		</div></div>
+		<div class="leftFace">
+                    <img  id="Img1" alt="jquery" src="IMG/jquery.jpg" style="width: 190px; height:190px;"/>
+		</div>
+		<div class="rightFace">
+                    <img  id="Img1" alt="java" src="IMG/java.jpg" style="width: 190px; height:190px;"/>
+		</div>
+	</div>
+    	<div class="cube four">
+		<div class="topFace"><div>
+                    <img  id="Img1" alt="google" src="IMG/google.jpg" style="width: 190px; height:190px;"/>
+		</div></div>
+		<div class="leftFace">
+                    <img  id="Img1" alt="jquery" src="IMG/mysql.jpg" style="width: 190px; height:190px;"/>
+		</div>
+		<div class="rightFace">
+                    <img  id="Img1" alt="java" src="IMG/oracle10g.jpg" style="width: 190px; height:190px;"/>
+		</div>
+	</div>
+
+</div>
+
+    </div>
+        <?php include('include/variables.php'); ?>
+<div id="footertext2" style="font-size: 0.8em; color:white">
+<p><?php echo $footer ?></p>
+</div>
+    </form>
+    </body>
+</html>
